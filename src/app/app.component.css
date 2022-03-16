@@ -1,0 +1,33 @@
+h1 {
+  cursor: pointer;
+  color: navy;
+}
+
+.nav {
+  height: 36px;
+  width: 100%;
+  background: navy;
+}
+
+.nav a {
+  display: inline-block;
+  color: white;
+  margin: 0 24px;
+  padding: 0 24px;
+  height: 100%;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.nav a:hover {
+  background: gray;
+}
+
+.outlet {
+  width: calc(100% - 48px);
+  height: 80vh;
+  margin: 24px;
+  padding: 24px;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
