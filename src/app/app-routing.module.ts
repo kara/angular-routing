@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { DocsComponent } from './docs/docs.component';
 import { HomeComponent } from './home/home.component';
-import { LearnComponent } from './learn/learn.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'docs', component: DocsComponent},
-  {path: 'learn', component: LearnComponent},
+  {
+    path: 'docs', 
+    loadChildren: () => import('./docs/docs.module').then(m => m.DocsModule)
+  },
+  {
+    path: 'learn', 
+    loadChildren: () => import('./learn/learn.module').then(m => m.LearnModule)
+  },
 ];
 
 @NgModule({
